@@ -1,0 +1,48 @@
+@model SCGrillConfig.Models.ApplicationUser
+@{
+    ViewBag.Title = "Details User";
+}
+
+@{ var applicationRole = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole(); }
+
+<h2>User: @Html.DisplayFor(model => model.UserName)</h2>
+
+<div>
+    <h4>Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+<div>
+    <hr />
+    <h4>
+        Roles
+    </h4>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(modelRole => applicationRole.Name)
+            </th>
+        </tr>
+        @foreach (var role in ViewBag.RoleNames)
+        {
+            <tr>
+                <td>
+                    @Html.Raw(role)
+                </td>
+            </tr>
+        }
+    </table>
+</div>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="SCGrillConfigContext-Web.config Connection String" description="SCGrillConfigContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=|DataDirectory|\SCGrillConfig.sdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\barriosa\\Documents\\Projects\\SCGrillConfig\\SCGrillConfig\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SCGrillConfigContext']/@connectionString" />
+  </parameter>
+</parameters>

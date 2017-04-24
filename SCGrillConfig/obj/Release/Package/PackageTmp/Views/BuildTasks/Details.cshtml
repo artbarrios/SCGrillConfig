@@ -1,0 +1,117 @@
+@model SCGrillConfig.Models.BuildTask
+
+@{
+    ViewBag.Title = "Details BuildTask";
+}
+
+<h2>Build Task: @Html.DisplayFor(model => model.Name)</h2>
+
+<div>
+    <h4>Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+<div>
+    <hr />
+    <h4>
+        Grill Confgurations
+        &nbsp&nbsp&nbsp
+        <small>@Html.ActionLink("Add Grill Confguration To Build Task", "AddGrillConfgurationToBuildTask", "BuildTasks", new { id = Model.Id }, null)</small>
+    </h4>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(modelGrillConfguration => Model.GrillConfgurations.FirstOrDefault().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(modelGrillConfguration => Model.GrillConfgurations.FirstOrDefault().MainBurnerCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(modelGrillConfguration => Model.GrillConfgurations.FirstOrDefault().InfraredBurnerCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(modelGrillConfguration => Model.GrillConfgurations.FirstOrDefault().GrillTypeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(modelGrillConfguration => Model.GrillConfgurations.FirstOrDefault().FuelId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(modelGrillConfguration => Model.GrillConfgurations.FirstOrDefault().SideBurnerTypeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(modelGrillConfguration => Model.GrillConfgurations.FirstOrDefault().GrillSizeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(modelGrillConfguration => Model.GrillConfgurations.FirstOrDefault().MaterialId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(modelGrillConfguration => Model.GrillConfgurations.FirstOrDefault().ColorId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(modelGrillConfguration => Model.GrillConfgurations.FirstOrDefault().BuildTaskFlowchartDiagramData)
+            </th>
+        <th></th>
+        </tr>
+@foreach (var grillConfguration in Model.GrillConfgurations)    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelGrillConfguration => grillConfguration.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelGrillConfguration => grillConfguration.MainBurnerCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelGrillConfguration => grillConfguration.InfraredBurnerCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelGrillConfguration => grillConfguration.GrillType.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelGrillConfguration => grillConfguration.Fuel.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelGrillConfguration => grillConfguration.SideBurnerType.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelGrillConfguration => grillConfguration.GrillSize.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelGrillConfguration => grillConfguration.Material.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelGrillConfguration => grillConfguration.Color.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelGrillConfguration => grillConfguration.BuildTaskFlowchartDiagramData)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", "GrillConfgurations", new { id = grillConfguration.Id }, null)
+ |
+                @Html.ActionLink("Remove from List", "RemoveGrillConfgurationFromBuildTask", "BuildTasks", new { buildTaskId = Model.Id, grillConfgurationId = grillConfguration.Id }, null )
+            </td>
+        </tr>
+}
+    </table>    
+</div>
+

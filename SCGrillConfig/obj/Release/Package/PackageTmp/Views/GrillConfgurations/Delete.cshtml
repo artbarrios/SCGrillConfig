@@ -1,0 +1,105 @@
+@model SCGrillConfig.Models.GrillConfguration
+
+@{
+    ViewBag.Title = "Delete GrillConfguration";
+}
+
+<h2>Grill Confguration: @Html.DisplayFor(model => model.Name)</h2>
+
+<div>
+    <h4>Delete</h4>
+    <h3>Are you sure you want to delete this?</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MainBurnerCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MainBurnerCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InfraredBurnerCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InfraredBurnerCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GrillTypeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GrillTypeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FuelId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FuelId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SideBurnerTypeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SideBurnerTypeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GrillSizeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GrillSizeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaterialId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaterialId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ColorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ColorId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BuildTaskFlowchartDiagramData)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuildTaskFlowchartDiagramData)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
+

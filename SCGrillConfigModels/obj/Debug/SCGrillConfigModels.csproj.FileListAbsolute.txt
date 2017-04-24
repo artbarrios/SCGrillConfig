@@ -1,0 +1,7 @@
+C:\Users\barriosa\Documents\Projects\SCGrillConfig\SCGrillConfigModels\bin\Debug\SCGrillConfigModels.dll
+C:\Users\barriosa\Documents\Projects\SCGrillConfig\SCGrillConfigModels\bin\Debug\SCGrillConfigModels.pdb
+C:\Users\barriosa\Documents\Projects\SCGrillConfig\SCGrillConfigModels\obj\Debug\SCGrillConfigModels.dll
+C:\Users\barriosa\Documents\Projects\SCGrillConfig\SCGrillConfigModels\obj\Debug\SCGrillConfigModels.pdb
+C:\Users\barriosa\Documents\Projects\SCGrillConfig\SCGrillConfigModels\bin\Debug\Newtonsoft.Json.dll
+C:\Users\barriosa\Documents\Projects\SCGrillConfig\SCGrillConfigModels\bin\Debug\Newtonsoft.Json.xml
+C:\Users\barriosa\Documents\Projects\SCGrillConfig\SCGrillConfigModels\obj\Debug\SCGrillConfigModels.csprojResolveAssemblyReference.cache
